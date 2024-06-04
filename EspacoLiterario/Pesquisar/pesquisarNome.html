@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Livros</title>
+    <link rel="stylesheet" href="/EspacoLiterario/style.css">
+    <link rel="stylesheet" href="/EspacoLiterario/Pesquisar/styleNome.css">
+    <link rel="stylesheet" href="/EspacoLiterario/footer/footer.css">
+    <link rel="stylesheet" href="/EspacoLiterario/Header/header.css">
+</head>
+<body>
+    <main>
+        <div id="buscar">
+            <form id="PesquisarPorNome" onsubmit="event.preventDefault(); PesquisarNome();">
+                <input type="text" id="searchInput" placeholder="Digite o termo de busca">
+                <button type="submit">Pesquisar</button>
+            </form>
+            <form id="PesquisarPorGenero" onsubmit="event.preventDefault();PesquisarGenero();">
+                <select id="generoSelect">
+                    <option value="">Selecione um Gênero</option>
+                    <option value="Fiction">Ficção</option>
+                    <option value="Nonfiction">Não-ficção</option>
+                    <option value="Science">Ciência</option>
+                    <option value="Fantasy">Fantasia</option>
+                    <option value="Biography & Autobiography">Biografia e Autobiografia</option>
+                    <option value="History">História</option>
+                    <option value="Mystery & Detective">Mistério e Detetive</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Science Fiction">Ficção Científica</option>
+                    <option value="Thriller">Suspense</option>
+                    <option value="Young Adult">Jovem Adulto</option>
+                    <option value="Children">Infantil</option>
+                    <option value="Comics & Graphic Novels">Quadrinhos e Novelas Gráficas</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Health & Fitness">Saúde e Fitness</option>
+                    <option value="Self-Help">Autoajuda</option>
+                    <option value="Cooking">Culinária</option>
+                    <option value="Travel">Viagem</option>
+                    <option value="Religion">Religião</option>
+                    <option value="Art">Arte</option>
+                    <option value="Music">Música</option>
+                    <option value="Poetry">Poesia</option>
+                    <option value="Education">Educação</option>
+                    <option value="Business & Economics">Negócios e Economia</option>
+                    <option value="Computers">Computação</option>
+                    <option value="Law">Direito</option>
+                    <option value="Philosophy">Filosofia</option>
+                    <option value="Psychology">Psicologia</option>
+                    <option value="Sports & Recreation">Esportes e Recreação</option>
+                    <option value="Technology & Engineering">Tecnologia e Engenharia</option>
+                </select>
+                <button type="submit">Gênero</button>
+            </form>
+        </div>
+        <section id="resultado" class="resultado"></section>
+        <div class="pagination">
+            <button id="anteriorBotao">Anterior</button>
+            <button id="proximoBotao">Próximo</button>
+        </div>
+    </main>
+    <script src="/EspacoLiterario/Pesquisar/scriptNome.js"></script>
+    <script src="/EspacoLiterario/autenticacao.js" type="module"></script>
+    <script src="/EspacoLiterario/footer/footer.js"></script>
+    <script src="/EspacoLiterario/Header/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+.suspenso{
+    position: left;
+    
+}
+
+
+.carrossel-container {
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+    margin-top: 4%;
+    background: linear-gradient(to bottom,#4e73c2, rgb(60, 102, 194));
+    border-radius: 8px;
+}
+
+.carrossel-container h2 {
+    margin-bottom: 10px;
+}
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+}
+
+.livro {
+    flex:1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.livro img {
+    width: 150px; 
+    height: 200px; 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.livro-info {
+    margin: 10px;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.livro-titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.livro-autor, .livro-avaliacao {
+    font-weight: bold;
+    margin-bottom:5px;
+}
+.livro-preco{
+    margin: 10px;
+}
+.estrela {
+    font-size: 20px;
+    color: rgb(253, 252, 252);
+}
+
+.estrela.gold {
+    color: gold;
+}
+
+
+.botao-compra {
+    display: inline-block;
+    padding: 15px 30px;
+    background-image: linear-gradient(to right, #7fcc2b 0%, #9ade38 51%, #aee165 100%);
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+}
+.botao-compra:hover{
+    color: white;
+    background-image: linear-gradient(to right, #2f6e08 0%, #238e0c 51%, #1c772f 100%);
+
+}
+
+.carrossel-button {
+    margin: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    opacity: 20%;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+    padding: 9px;
+    transition: background-color 0.3s ease;
+    font-size: 50px;
+}
+
+#AnteriorRecomendado {
+    font-weight: bold;
+    left: 20px;
+}
+
+#ProximoRecomendado {
+    font-weight: bold;
+    right: 20px;
+}
+
+.carrossel-button:hover {
+    opacity: 70%;
+    color: black;
+    background-color: #a8a8a8;
+}
+
+
+.verMais {
+    display: inline-block;
+    padding: 7px 15px;
+    background-image: linear-gradient(to right, #7fcc2b 0%, #9ade38 51%, #aee165 100%);
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: small;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.verMais:hover{
+    color: white;
+    background-image: linear-gradient(to right, #2f6e08 0%, #238e0c 51%, #1c772f 100%);
+
+}
+
+@media (max-width: 768px) {
+    .carrossel-container {
+        margin-top: 2%;
+        padding: 2%;
+    }
+
+    .carrossel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livro {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .livro img {
+        width: 120px;
+        height: auto;
+        margin: 0 0 10px 0;
+    }
+
+    .livro-info {
+        font-size: 14px;
+    }
+
+    .livro-titulo {
+        font-size: 22px;
+    }
+
+    .carrossel-button {
+        visibility: hidden;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .carrossel-container {
+        margin-top: 1%;
+        padding: 3%;
+    }
+
+    .livro img {
+        width: 100px;
+        height: auto;
+    }
+
+    .livro-info {
+        font-size: 12px;
+    }
+
+    .livro-titulo {
+        font-size: 18px;
+    }
+
+    .carrossel-button {
+        visibility: hidden;
+    }
+ 
+    
+}

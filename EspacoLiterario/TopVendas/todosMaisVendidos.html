@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Mais Vendidos</title>
+    <link rel="stylesheet" href="/EspacoLiterario/style.css">
+    <link rel="stylesheet" href="/EspacoLiterario/TopVendas/todosMaisVendidos.css">
+    <link rel="stylesheet" href="/EspacoLiterario/footer/footer.css">
+    <link rel="stylesheet" href="/EspacoLiterario/Header/header.css">
+</head>
+<body>
+    <main>
+        <h1>Lista Completa dos Mais Vendidos</h1>
+        <div id="todosLivros" class="livro-list"></div>
+    </main>
+
+    <div id="livroDetalhes" class="modal">
+        <div class="modal-content">
+            <span class="botaoFechar">&times;</span>
+            <h1 id="livroTitulo"></h1>
+            <h2 id="livroAutor"></h2>
+            <p id="livroDescricao"></p>
+            <a id="linkCompra" href="#">Comprar</a>
+            <button id="Indisponivel">Indisponível</button>
+        </div>
+    </div>
+
+    <div class="pagination" id="pagination">
+        <button id="AnteriorBotao">Anterior</button>
+        <button id="ProximoBotao">Próximo</button>
+    </div>
+
+    <script src="/EspacoLiterario/TopVendas/todosMaisVendidos.js"></script>
+    <script src="/EspacoLiterario/autenticacao.js" type="module"></script>
+    <script src="/EspacoLiterario/footer/footer.js"></script>
+    <script src="/EspacoLiterario/Header/header.js"></script>
+</body>
+</html>

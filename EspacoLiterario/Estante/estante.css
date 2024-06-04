@@ -1,0 +1,226 @@
+h1 {
+    margin: 1%;
+}
+
+#livros-container {
+    padding: 1%;
+    text-align: center;
+}
+
+#carregar-livros {
+    visibility: collapse;
+}
+
+.livros-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.livro {
+    background: linear-gradient(to bottom,#456fc9, rgb(50, 100, 207));
+    color: black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.2s;
+    max-width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+.livro:hover {
+    transform: scale(1.05);
+}
+
+.livro img {
+    width: 150px; 
+    height: 200px; 
+    padding: 10px;
+    margin: 10px;
+}
+
+.livro h3 {
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px; 
+}
+
+.livro p {
+    margin: 10px auto;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(156, 146, 247, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.modal-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#livro-titulo {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#livro-sinopse {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#read-livro, #download-livro, #ler-google {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#read-livro:hover, #download-livro:hover, #ler-google:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .livros-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .livro {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .livro img {
+        width: 120px;
+        height: auto;
+    }
+
+    .livro h3 {
+        font-size: 16px;
+    }
+
+    .livro p {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-buttons button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .livro {
+        width: 90%;
+    }
+
+    .livro img {
+        width: 100px;
+        height: auto;
+    }
+
+    .livro h3 {
+        font-size: 14px;
+    }
+
+    .livro p {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-buttons button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #livro-titulo {
+        font-size: 20px;
+    }
+
+    #livro-sinopse {
+        font-size: 14px;
+    }
+}
