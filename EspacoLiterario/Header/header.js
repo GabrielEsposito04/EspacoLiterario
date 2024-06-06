@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navMenu.classList.toggle('active');
     });
 
-    // Adicionar evento de clique para alternar o menu suspenso
+ 
     const botaoGoogle = document.getElementById('botaoGoogle');
     const menuSuspenso = document.getElementById('menuSuspenso');
 
