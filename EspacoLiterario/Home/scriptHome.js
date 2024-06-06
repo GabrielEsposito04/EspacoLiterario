@@ -62,12 +62,17 @@ function displayBooks(livros, carrocelId) {
         const livroPreco = document.createElement('div');
         livroPreco.classList.add('livro-preco');
         livroPreco.textContent = livro.saleInfo.listPrice ? `${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(livro.saleInfo.listPrice.amount)}` 
-        : 'Preço não disponível';
+        : 'Indisponível';
+        
         const linkCompra = document.createElement('a');
         linkCompra.href = livro.saleInfo.buyLink || '#';
         linkCompra.target = '_blank';
-        linkCompra.textContent = 'Comprar';
+        linkCompra.textContent = livro.saleInfo.buyLink ? 'Comprar' : 'Indisponível';
         linkCompra.classList.add('botao-compra');
+        if (!livro.saleInfo.buyLink) {
+            linkCompra.classList.add('indisponivel');
+            linkCompra.style.pointerEvents = 'none'; 
+        }
 
         livroInfo.appendChild(livroTitulo);
         livroInfo.appendChild(livroAutor);
@@ -98,6 +103,7 @@ function shiftSlide(carrocelId, direcao) {
         livro.style.display = (i >= indicesSlidesAtuais[carrocelId] * livrosPorSlide && i < (indicesSlidesAtuais[carrocelId] + 1) * livrosPorSlide) ? 'block' : 'none';
     });
 }
+
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
         return text.slice(0, maxLength) + '...';

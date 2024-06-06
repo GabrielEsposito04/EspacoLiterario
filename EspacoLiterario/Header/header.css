@@ -1,5 +1,6 @@
 header {
-    background: linear-gradient(to top,#5e6ef5, #3061ca );
+    background: linear-gradient(to top,#00BFFF,
+    #1E90FF);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,11 +17,12 @@ header nav a {
     transition: all .35s ease-in-out;
     font-family: Arial, sans-serif;
     font-weight: bold;
+    border: none;
     text-decoration: none;
 }
 
 header nav a:hover {
-    color: #d14b56; 
+    color: white; 
     transform: translateX(-60px);
     
     

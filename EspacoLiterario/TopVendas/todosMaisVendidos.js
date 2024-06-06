@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     let paginaAtual = 1;
     buscarMaisVendidos(paginaAtual);
@@ -56,7 +55,7 @@ function displayMaisVendidos(books) {
         livroDiv.setAttribute('data-index', index);
 
         const img = document.createElement('img');
-        img.src = livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/150';
+        img.src = livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : '/imagens/indisponivel.png';
         img.alt = `Capa do livro ${livro.volumeInfo.titulo}`;
         livroDiv.appendChild(img);
 
@@ -87,7 +86,7 @@ function displayMaisVendidos(books) {
         const livroPreco = document.createElement('div');
         livroPreco.classList.add('livro-preco');
         livroPreco.textContent = livro.saleInfo.listPrice ? `${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(livro.saleInfo.listPrice.amount)}` 
-        : 'Preço não disponível';
+        : 'indisponivel';
         livroDiv.appendChild(livroPreco);
 
         const comprarBotao = document.createElement('button');

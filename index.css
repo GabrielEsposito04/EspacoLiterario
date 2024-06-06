@@ -1,0 +1,184 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left,
+  #202020,
+  #181818,
+  #141414,
+  #0F0F0F,
+  #0A0A0A,
+  #050505
+);
+  background-size: 800% 800%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+h1 {
+  margin: 0;
+  font-size: 100px;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(to right,
+  #00BFFF,
+  #1E90FF,
+  #87CEFA,
+  #ADD8E6,
+  #B0E0E6,
+  #E0FFFF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: shine 5s infinite; 
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+#botaoLogin {
+  width: 270px;
+  height: 75px;
+  margin-top: 15px; 
+  border: 1px;
+  outline: none;
+  color: black;
+  background: #111111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#botaoLogin:before {
+  content: '';
+  background: linear-gradient(45deg, 
+  #1E90FF,
+  #87CEFA,
+  #ADD8E6);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+#botaoLogin:active {
+  color: #000;
+}
+
+#botaoLogin:active:after {
+  background: transparent;
+}
+
+#botaoLogin:hover:before {
+  opacity: 1;
+}
+
+#botaoLogin:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+  #00BFFF,
+  #1E90FF);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+  .suspenso-content button,
+  #botaoGoogle {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 50px;
+  }
+  .suspenso-content button,
+  #botaoGoogle {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+  .suspenso-content button,
+  #botaoGoogle {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}

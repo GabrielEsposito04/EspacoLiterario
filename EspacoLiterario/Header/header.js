@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="/EspacoLiterario/Home/home.html">Home</a>
                 <a href="/EspacoLiterario/Pesquisar/pesquisarNome.html">Pesquisar</a>
                 <a href="/EspacoLiterario/Estante/estante.html">Biblioteca</a>
-                <a href="/EspacoLiterario/Estante/estante.html">Sobre</a>
+                <a href="/EspacoLiterario/Sobre/sobre.html">Sobre</a>
                 <div class="suspenso">
                     <button id="botaoGoogle"><img src="/imagens/google.png" alt="Google Sign-In"></button>
                     <div id="menuSuspenso" class="suspenso-content">

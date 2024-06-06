@@ -4,11 +4,12 @@
     min-height: 100vh;
 }
 
+
 footer {
-    background: linear-gradient(to bottom,#5e6ef5, #3061ca );
+    background: linear-gradient(to bottom,#87CEFA, #1E90FF,#00BFFF);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
     color: black;
     padding: 60px 40px; 
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
     margin-top: 10%;
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -57,13 +58,15 @@ footer {
     color: black;
     text-decoration: none;
     font-size: 20px; 
+    font-family: Arial, sans-serif;
     font-weight: bold;
+    border: none;
     transition: color 0.3s; 
 }
 
 .footer-links a:hover, .footer-links2 a:hover {
     text-decoration: none; 
-    color: #d487d2; 
+    color: white; 
 }
 
 /* Estilos responsivos */

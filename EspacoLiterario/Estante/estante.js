@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     const livroLista = document.getElementById('livros-lista');
     const modal = document.getElementById('livro-modal');
-    const botaoFecharModal = document.querySelector('.fechar-botao');
+    const botaoFecharModal = document.querySelector('.fechar ');
     const lerLivroGoogleBotao = document.getElementById('ler-google');
     const downloadLivroBotao = document.getElementById('download-livro');
     let selectedBook;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                     autor.textContent = item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Autor desconhecido';
 
                     const miniatura = document.createElement('img');
-                    miniatura.src = item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/128x192.png?text=No+Image';
+                    miniatura.src = item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '/imagens/indisponivel.png';
 
                     livro.addEventListener('click', () => {
                         selectedBook = item;

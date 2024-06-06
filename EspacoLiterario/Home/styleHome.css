@@ -3,14 +3,18 @@
     
 }
 
-
 .carrossel-container {
+    background: linear-gradient(to bottom,#87CEFA,#1E90FF);
     position: relative;
     padding: 1%;
     margin: 1%;
     margin-top: 4%;
-    background: linear-gradient(to bottom,#4e73c2, rgb(60, 102, 194));
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
+    border-width: 0.5px; 
+    border-style: solid; 
+    border-image: 
+    linear-gradient(to bottom,#1E90FF, #ADD8E6) 1;
 }
 
 .carrossel-container h2 {
@@ -59,19 +63,19 @@
 }
 .estrela {
     font-size: 20px;
-    color: rgb(253, 252, 252);
+    color:#0A0A0A;
 }
 
 .estrela.gold {
-    color: gold;
+    color:#FFC700;
 }
 
 
 .botao-compra {
     display: inline-block;
     padding: 15px 30px;
-    background-image: linear-gradient(to right, #7fcc2b 0%, #9ade38 51%, #aee165 100%);
-    color: black;
+    background-color: #01509a;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -79,12 +83,31 @@
     margin-top: 10px;
     font-family: Arial, sans-serif;
     font-weight: bold;
+    border: none;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
+
 
 }
 .botao-compra:hover{
-    color: white;
-    background-image: linear-gradient(to right, #2f6e08 0%, #238e0c 51%, #1c772f 100%);
+    background-color: #87cefa;
+}
+.livro .indisponivel {
+    background-color:#FF0000;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: not-allowed;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+}
 
+.livro .indisponivel:hover {
+    background-color: #B22222;
 }
 
 .carrossel-button {
@@ -101,11 +124,14 @@
     padding: 9px;
     transition: background-color 0.3s ease;
     font-size: 50px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
+
 }
 
 #AnteriorRecomendado {
     font-weight: bold;
     left: 20px;
+    
 }
 
 #ProximoRecomendado {
@@ -122,23 +148,22 @@
 
 .verMais {
     display: inline-block;
-    padding: 7px 15px;
-    background-image: linear-gradient(to right, #7fcc2b 0%, #9ade38 51%, #aee165 100%);
-    color: black;
+    padding: 15px 30px;
+    background-color: #01509a;
+    color: white;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 10px;
-    font-size: small;
     font-family: Arial, sans-serif;
-    font-size: 14px;
     font-weight: bold;
+    border: none;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
+
 }
 .verMais:hover{
-    color: white;
-    background-image: linear-gradient(to right, #2f6e08 0%, #238e0c 51%, #1c772f 100%);
-
+    background-color: #87cefa;
 }
 
 @media (max-width: 768px) {

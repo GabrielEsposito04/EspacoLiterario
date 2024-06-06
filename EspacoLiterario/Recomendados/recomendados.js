@@ -50,16 +50,16 @@ function createBookElement(livro) {
     livroDiv.classList.add('livro');
 
     const img = document.createElement('img');
-    img.src = livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : 'placeholder.jpg';
+    img.src = livro.volumeInfo.imageLinks ? livro.volumeInfo.imageLinks.thumbnail : '/imagens/indisponivel.png';
     img.alt = `Capa do livro ${livro.volumeInfo.titulo}`;
     livroDiv.appendChild(img);
 
     const titulo = document.createElement('h3');
-    titulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 35);
+    titulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 15);
     livroDiv.appendChild(titulo);
 
     const autor = document.createElement('p');
-    autor.textContent = `Autor: ${truncateText(livro.volumeInfo.authors ? livro.volumeInfo.authors.join(', ') : 'Desconhecido', 20)}`;
+    autor.textContent = `Autor: ${truncateText(livro.volumeInfo.authors ? livro.volumeInfo.authors.join(', ') : 'Desconhecido', 10)}`;
     livroDiv.appendChild(autor);
 
     const avaliacao = document.createElement('div');
@@ -95,10 +95,9 @@ function createBookElement(livro) {
     return livroDiv;
 }
 
-function showSynopsis(sinopse, buyLink) {
+function showSynopsis(sinopse) {
     const modal = document.getElementById('sinopseModal');
     document.getElementById('sinopseTexto').innerText = sinopse;
-    document.getElementById('linkCompra').href = buyLink;
     modal.style.display = "flex";
 }
 

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="footer-links2">
                 <li><a href="/EspacoLiterario/TopVendas/todosMaisVendidos.html">Mais Vendidos</a></li>
                 <li><a href="/EspacoLiterario/Recomendados/recomendados.html">Recomendados</a></li>
-                <li><a href="link3.html">Sobre</a></li>
+                <li><a href="/EspacoLiterario/Sobre/sobre.html">Sobre</a></li>
             </ul>
             <div class="footer-contact">
                 <p>Email: contato@espaco-literal.com</p>

@@ -45,7 +45,7 @@ function handleLogin() {
             if (menuSuspenso) menuSuspenso.style.display = 'none';
 
            
-            if (window.location.pathname === '/EspacoLiterario/Index/index.html') {
+            if (window.location.pathname === '/index.html') {
                 window.location.href = '/EspacoLiterario/Home/home.html';
             }
         })
@@ -62,7 +62,7 @@ function handleLogout() {
         console.log('Usuário deslogado');
 
         
-        window.location.href = '/EspacoLiterario/Index/index.html';
+        window.location.href = '/index.html';
 
         
         const botaoLogout = document.getElementById('botaoLogout');
