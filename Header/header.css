@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    margin-left: 10px;
+    background-color: linear-gradient(to right,#b9ebfc,#00BFFF,
+    #59abfd);
+    
+}
+
+#logo img {
+    width: 30%;
+    height: auto;
+    margin-left: 15px;
+    
+}
 header {
-    background: linear-gradient(to top,#00BFFF,
-    #1E90FF);
+    background: linear-gradient(to right,#ace8fc,#00BFFF,
+    #59abfd);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +31,8 @@ header {
 }
 
 header nav a {
-    color: black;
+    background-color: linear-gradient(to right,#ace8fc,#00BFFF,
+    #59abfd);
     padding: 10px 15px;
     margin: 10px;
     border-radius: 5px;

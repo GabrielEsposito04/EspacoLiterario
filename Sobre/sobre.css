@@ -1,54 +1,86 @@
-body{
-    background: #B0E0E6;
+/* Definindo variáveis CSS para cores e tamanhos de fontes */
+:root {
+    --background-color: #B0E0E6;
+    --primary-color: black;
+    --secondary-color: white;
+    --accent-color: #1E90FF;
+    --padding-large: 40px;
+    --padding-medium: 20px;
+    --padding-small: 10px;
+    --padding-xsmall: 5px;
+    --font-size-h1: 2.5em;
+    --font-size-h2: 2em;
+    --font-size-p: 1.5em;
+    --font-size-ul: 1.5em;
+    --line-height: 1.8;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-time: 0.3s;
 }
+
+body {
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .container {
-    margin:auto;
-    padding: 20px;
+    margin: auto;
+    padding: var(--padding-medium);
+    padding-top: calc(var(--padding-medium) + 60px); /* Espaço extra para o header */
+    flex: 1;
 }
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+}
+
 h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
-    color: black;
+    font-size: var(--font-size-h1);
+    margin: var(--padding-medium) 0;
     text-transform: uppercase;
-    padding-bottom: 10px;
+    padding-bottom: var(--padding-small);
 }
 
 h2 {
-    font-size: 2.0em;
-    margin: 20px 0;
+    font-size: var(--font-size-h2);
+    margin: var(--padding-medium) 0;
     text-align: left;
-    line-height: 1.8;
-    color: black;
-    padding-bottom: 10px;
+    line-height: var(--line-height);
+    padding-bottom: var(--padding-small);
 }
 
 p {
-    margin: 20px 0;
-    padding: 0 40px;
+    margin: var(--padding-medium) 0;
+    padding: 0 var(--padding-large);
     text-align: left;
-    font-size: 2.0em;
-    
+    font-size: var(--font-size-p);
 }
 
 ul {
-    font-size: 1.5em;
-    margin: 20px 40px;
-    padding-left: 20px;
+    font-size: var(--font-size-ul);
+    margin: var(--padding-medium) var(--padding-large);
+    padding-left: var(--padding-medium);
     text-align: left;
 }
+
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: var(--padding-small);
 }
 
 ul ul {
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: var(--padding-small);
+    margin-left: var(--padding-medium);
     font-size: 1em;
 }
 
+
 @media (max-width: 992px) {
     .container {
-        padding: 10px;
+        padding: var(--padding-small);
     }
 
     h1 {
@@ -60,7 +92,7 @@ ul ul {
     }
 
     p, ul {
-        padding: 0 20px;
+        padding: 0 var(--padding-medium);
     }
 }
 
@@ -68,11 +100,13 @@ ul ul {
     h1 {
         font-size: 2em;
     }
+
     h2 {
         font-size: 1.6em;
     }
+
     p, ul {
-        padding: 0 15px;
+        padding: 0 var(--padding-small);
     }
 }
 
@@ -80,11 +114,13 @@ ul ul {
     h1 {
         font-size: 1.8em;
     }
+
     h2 {
         font-size: 1.4em;
     }
+
     p, ul {
-        padding: 0 10px;
+        padding: 0 var(--padding-xsmall);
     }
 }
 
@@ -92,10 +128,12 @@ ul ul {
     h1 {
         font-size: 1.5em;
     }
+
     h2 {
         font-size: 1.2em;
     }
+
     p, ul {
-        padding: 0 5px;
+        padding: 0 var(--padding-xsmall);
     }
 }

@@ -88,6 +88,8 @@ h1 {
     flex-direction: column;
     align-items: center;
     border: none;
+    margin: 0 auto;
+    margin-top: 10%;
 }
 
 .modal-buttons {

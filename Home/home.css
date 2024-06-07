@@ -1,7 +1,16 @@
 .suspenso{
     position: left;
+    margin: 15px;
+    
     
 }
+.linha-meio {
+    width: 100%;
+    margin: 20px auto;
+    border-top: 2px;
+
+}
+
 
 .carrossel-container {
     background: linear-gradient(to bottom,#87CEFA,#1E90FF);
@@ -114,17 +123,16 @@
     margin: none;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
     background-color: transparent;
     color: white;
-    opacity: 20%;
+    opacity: 70%;
     border: none;
     cursor: pointer;
     border-radius: 10%;
     padding: 9px;
     transition: background-color 0.3s ease;
     font-size: 50px;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
 
 }
 
@@ -141,7 +149,7 @@
 
 .carrossel-button:hover {
     opacity: 70%;
-    color: black;
+    color: white;
     background-color: #a8a8a8;
 }
 

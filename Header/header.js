@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const headerHTML = `
         <header>
-            <a href="/Home/home.html" class="logo"><img src="/imagens/logo-removebg-preview.png" alt="Logo"></a>
+            <a href="/Home/home.html" id="logo"><img src="/imagens/logoEspacoLiterario.png" alt="Logo">Espaço Literário</a>
             <nav id="navMenu">
                 <a href="/Home/home.html">Home</a>
                 <a href="/Pesquisar/pesquisar.html">Pesquisar</a>
