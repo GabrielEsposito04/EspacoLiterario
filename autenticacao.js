@@ -45,8 +45,8 @@ function handleLogin() {
             if (menuSuspenso) menuSuspenso.style.display = 'none';
 
            
-            if (window.location.pathname === '/index.html') {
-                window.location.href = '/Home/home.html';
+            if (window.location.pathname === 'index.html') {
+                window.location.href = 'home.html';
             }
         })
         .catch((error) => {
@@ -62,7 +62,7 @@ function handleLogout() {
         console.log('Usuário deslogado');
 
         
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
 
         
         const botaoLogout = document.getElementById('botaoLogout');
