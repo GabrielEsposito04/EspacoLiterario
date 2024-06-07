@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.innerHTML = `
         <div class="footer-content">
             <ul class="footer-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="pesquisar.html">Pesquisar</a></li>
-                <li><a href="estante.html">Biblioteca</a></li>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li><a href="/Pesquisar/pesquisar.html">Pesquisar</a></li>
+                <li><a href="/Estante/estante.html">Biblioteca</a></li>
             </ul>
             <ul class="footer-links2">
-                <li><a href="todosMaisVendidos.html">Mais Vendidos</a></li>
-                <li><a href="recomendados.html">Recomendados</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="/TopVendas/todosMaisVendidos.html">Mais Vendidos</a></li>
+                <li><a href="/Recomendados/recomendados.html">Recomendados</a></li>
+                <li><a href="/Sobre/sobre.html">Sobre</a></li>
             </ul>
             <div class="footer-contact">
                 <p>Email: contato@espaco-literal.com</p>

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const headerHTML = `
         <header>
-            <a href=".home.html" class="logo"><img src="./imagens/logo-removebg-preview.png" alt="Logo"></a>
+            <a href="/Home/home.html" class="logo"><img src="/imagens/logo-removebg-preview.png" alt="Logo"></a>
             <nav id="navMenu">
-                <a href="home.html">Home</a>
-                <a href="pesquisar.html">Pesquisar</a>
-                <a href="estante.html">Biblioteca</a>
-                <a href="sobre.html">Sobre</a>
+                <a href="/Home/home.html">Home</a>
+                <a href="/Pesquisar/pesquisar.html">Pesquisar</a>
+                <a href="/Estante/estante.html">Biblioteca</a>
+                <a href="/Sobre/sobre.html">Sobre</a>
                 <div class="suspenso">
                     <button id="botaoGoogle"><img src="/imagens/google.png" alt="Google Sign-In"></button>
                     <div id="menuSuspenso" class="suspenso-content">
