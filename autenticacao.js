@@ -46,7 +46,7 @@ function handleLogin() {
 
            
             if (window.location.pathname === '/index.html') {
-                window.location.href = '../Home/home.html';
+                window.location.href = '/Home/home.html';
             }
         })
         .catch((error) => {
