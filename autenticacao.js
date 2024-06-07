@@ -42,7 +42,7 @@ function handleLogin() {
             const menuSuspenso = document.getElementById('menuSuspenso');
             if (menuSuspenso) menuSuspenso.style.display = 'none';
 
-            if (window.location.pathname === '/index.html') {
+            if (window.location.pathname === '/public/index.html') {
                 window.location.href = '/Home/home.html';
             }
         })
@@ -58,7 +58,7 @@ function handleLogout() {
         console.log('Usuário deslogado');
 
         // Redireciona para a página de login em vez de fechar a janela
-        window.location.href = '/index.html';
+        window.location.href = '/public/index.html';
 
         const botaoLogout = document.getElementById('botaoLogout');
         if (botaoLogout) botaoLogout.style.display = 'none';
