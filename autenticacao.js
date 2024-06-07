@@ -57,7 +57,7 @@ function handleLogout() {
         sessionStorage.removeItem('googleAccessToken');
         console.log('Usuário deslogado');
 
-        // Redireciona para a página de login em vez de fechar a janela
+   
         window.location.href = '/index.html';
 
         const botaoLogout = document.getElementById('botaoLogout');
