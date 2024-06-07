@@ -17,7 +17,6 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/books');
 
-
 setPersistence(auth, browserSessionPersistence)
   .then(() => {
     console.log('Persistência configurada.');
@@ -26,12 +25,11 @@ setPersistence(auth, browserSessionPersistence)
     console.error('Erro ao configurar persistência:', error);
   });
 
-
 function handleLogin() {
     signInWithPopup(auth, provider)
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
-            const authToken = credential.accessToken; 
+            const authToken = credential.accessToken;
             sessionStorage.setItem('googleAccessToken', authToken);
             const user = result.user;
             console.log('Token de autenticação:', authToken); 
@@ -44,7 +42,6 @@ function handleLogin() {
             const menuSuspenso = document.getElementById('menuSuspenso');
             if (menuSuspenso) menuSuspenso.style.display = 'none';
 
-           
             if (window.location.pathname === '/index.html') {
                 window.location.href = '/Home/home.html';
             }
@@ -55,23 +52,20 @@ function handleLogin() {
         });
 }
 
-
 function handleLogout() {
     signOut(auth).then(() => {
         sessionStorage.removeItem('googleAccessToken');
         console.log('Usuário deslogado');
 
-        
+        // Redireciona para a página de login em vez de fechar a janela
         window.location.href = '/index.html';
 
-        
         const botaoLogout = document.getElementById('botaoLogout');
         if (botaoLogout) botaoLogout.style.display = 'none';
     }).catch((error) => {
         console.error('Erro ao deslogar:', error);
     });
 }
-
 
 export function handleDropdownToggle() {
     const menuSuspenso = document.getElementById('menuSuspenso');
@@ -80,18 +74,15 @@ export function handleDropdownToggle() {
     }
 }
 
-
 window.addEventListener('beforeunload', () => {
     const authToken = sessionStorage.getItem('googleAccessToken');
     console.log('Token de autenticação:', authToken);
 });
 
-
 window.onload = () => {
     const botaoLogin = document.getElementById('botaoLogin');
     const botaoLogout = document.getElementById('botaoLogout');
 
- 
     const authToken = sessionStorage.getItem('googleAccessToken');
     if (authToken) {
         if (botaoLogin) botaoLogin.style.display = 'none';
@@ -100,7 +91,6 @@ window.onload = () => {
         if (botaoLogin) botaoLogin.style.display = 'block';
         if (botaoLogout) botaoLogout.style.display = 'none';
     }
-
 
     if (botaoLogin) botaoLogin.addEventListener('click', handleLogin);
     if (botaoLogout) botaoLogout.addEventListener('click', handleLogout);
