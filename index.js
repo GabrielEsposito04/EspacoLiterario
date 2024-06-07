@@ -1,4 +1,4 @@
-import { handleDropdownToggle } from './autenticacao.js';
+import { handleDropdownToggle } from '/autenticacao.js';
 
 const botaoGoogle = document.getElementById('botaoGoogle');
 
