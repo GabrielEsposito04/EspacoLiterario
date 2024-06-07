@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Recomendados/recomendados.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="/Header/header.css">
+</head>
+<body>
+        <div id="recommendedBooks" class="livro-list"></div>
+        <div class="paginacao">
+            <button id="prevPage">Anterior</button>
+            <button id="nextPage">Próximo</button>
+        </div>
+        <div id="sinopseModal" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <div id="sinopseTexto"></div>
+            </div>
+        </div>
+   
+    <script src="/Recomendados/recomendados.js"></script>
+    <script src="/footer/footer.js"></script>  
+    <script src="/Header/header.js"></script> 
+    <script type="module" src="/autenticacao.js"></script> 
+</body>
+</html>

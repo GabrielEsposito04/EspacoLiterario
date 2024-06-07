@@ -1,4 +1,4 @@
-import { handleDropdownToggle } from '/EspacoLiterario/autenticacao.js';
+import { handleDropdownToggle } from '/autenticacao.js';
 
 const botaoGoogle = document.getElementById('botaoGoogle');
 
