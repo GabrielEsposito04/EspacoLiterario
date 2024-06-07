@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="/Estante/estante.html">Biblioteca</a></li>
             </ul>
             <ul class="footer-links2">
-                <li><a href="/TopVendas/todosMaisVendidos.html">Mais Vendidos</a></li>
+                <li><a href="/MaisVendidos/todosMaisVendidos.html">Mais Vendidos</a></li>
                 <li><a href="/Recomendados/recomendados.html">Recomendados</a></li>
                 <li><a href="/Sobre/sobre.html">Sobre</a></li>
             </ul>
