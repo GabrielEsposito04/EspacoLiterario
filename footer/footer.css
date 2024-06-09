@@ -6,8 +6,8 @@
 
 
 footer {
-    background: linear-gradient(to bottom,#87CEFA, #1E90FF,#00BFFF);
-    color: black;
+    background: linear-gradient(to top,#5acef5,#00BFFF,
+    #59abfd);
     padding: 60px 40px; 
     margin-top: 10%;
     font-family: Arial, sans-serif;
@@ -37,6 +37,8 @@ footer {
 
 .footer-contact {
     text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: x-large;
 }
 
 .footer-links, .footer-links2, .footer-contact p {
@@ -54,13 +56,13 @@ footer {
 }
 
 .footer-links a, .footer-links2 a {
-    color: black;
     text-decoration: none;
     font-size: 20px; 
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
-    transition: color 0.3s; 
+    transition: color 0.3s;
+    font-size: x-large; 
 }
 
 .footer-links a:hover, .footer-links2 a:hover {
@@ -68,7 +70,6 @@ footer {
     color: white; 
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;

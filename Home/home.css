@@ -2,15 +2,13 @@
     position: left;
     margin: 15px;
     
-    
+     
 }
 .linha-meio {
     width: 100%;
     margin: 20px auto;
     border-top: 2px;
-
 }
-
 
 .carrossel-container {
     background: linear-gradient(to bottom,#87CEFA,#1E90FF);
@@ -52,9 +50,10 @@
 .livro-info {
     margin: 10px;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     font-weight: bold;
+    word-spacing: -5px;
 }
 
 .livro-titulo {
@@ -90,7 +89,7 @@
     text-decoration: none;
     border-radius: 10px;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 
@@ -110,7 +109,7 @@
     text-align: center;
     display: inline-block;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
 }
@@ -164,7 +163,8 @@
     text-decoration: none;
     border-radius: 10px;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
     font-weight: bold;
     border: none;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); 

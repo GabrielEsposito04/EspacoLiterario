@@ -60,11 +60,11 @@ function displayMaisVendidos(books) {
         livroDiv.appendChild(img);
 
         const titulo = document.createElement('h3');
-        titulo.textContent = trucarTexto(livro.volumeInfo.title || 'Título não disponível', 15);
+        titulo.textContent = trucarTexto(livro.volumeInfo.title || 'Título não disponível', 12);
         livroDiv.appendChild(titulo);
 
         const autor = document.createElement('p');
-        autor.textContent = `Autor: ${trucarTexto(livro.volumeInfo.authors ? livro.volumeInfo.authors.join(', ') : 'Desconhecido', 20)}`;
+        autor.textContent = `Autor: ${trucarTexto(livro.volumeInfo.authors ? livro.volumeInfo.authors.join(', ') : 'Desconhecido', 12)}`;
         livroDiv.appendChild(autor);
 
         const avaliacao = document.createElement('div');
@@ -145,7 +145,7 @@ function mostrarDetalhes(livro) {
 
 function trucarTexto(text, maxLength) {
     if (text.length > maxLength) {
-        return text.slice(0, maxLength) + '...';
+        return text.slice(0, maxLength) + '';
     }
     return text;
 }

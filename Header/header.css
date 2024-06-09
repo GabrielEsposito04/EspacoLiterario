@@ -8,8 +8,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     margin-left: 10px;
-    background-color: linear-gradient(to right,#b9ebfc,#00BFFF,
-    #59abfd);
+    
     
 }
 
@@ -31,13 +30,11 @@ header {
 }
 
 header nav a {
-    background-color: linear-gradient(to right,#ace8fc,#00BFFF,
-    #59abfd);
     padding: 10px 15px;
     margin: 10px;
     border-radius: 5px;
     transition: all .35s ease-in-out;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
     text-decoration: none;
@@ -58,7 +55,8 @@ header nav button {
     padding: 15px 30px;
     text-transform: uppercase;
     transition: 0.5s;
-    font-family: "Roboto", sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;    
     font-weight: 400;
     font-style: normal;
     border-radius: 100%;
@@ -107,6 +105,36 @@ header nav button {
 .hamburger.active span:nth-child(3) {
     transform: rotate(45deg) translate(-10px, -6px);
 }
+#botaoLogin {
+    margin: auto;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    font-weight: 700;
+    background: linear-gradient(to right,
+    #00BFFF,
+    #1E90FF);
+    cursor: pointer;
+    user-select: none;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
+
+}
+#botaoLogin:hover {
+    background-position: right center;
+    background: linear-gradient(to right,
+    #0084ff,
+    #1e65ff);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+
+}
 #botaoLogout {
     margin: auto;
     padding: 15px 30px;
@@ -121,6 +149,8 @@ header nav button {
     background-image: linear-gradient(45deg, #da130c 0%, #ee0303 50%, #ff2f2f 100%);
     cursor: pointer;
     user-select: none;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
 
 }
 #botaoLogout:hover {

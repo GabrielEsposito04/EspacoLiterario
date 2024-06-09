@@ -41,7 +41,7 @@ function displayBooks(livros, carrocelId) {
 
         const livroTitulo = document.createElement('div');
         livroTitulo.classList.add('livro-titulo');
-        livroTitulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 20);
+        livroTitulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 12);
         const livroAutor = document.createElement('div');
         livroAutor.classList.add('livro-autor');
         livroAutor.textContent = livro.volumeInfo.authors ? livro.volumeInfo.authors.join(', ') : 'Autor Desconhecido';
@@ -106,7 +106,7 @@ function shiftSlide(carrocelId, direcao) {
 
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
-        return text.slice(0, maxLength) + '...';
+        return text.slice(0, maxLength) + '';
     }
     return text;
 }

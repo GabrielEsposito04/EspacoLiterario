@@ -6,13 +6,13 @@ body {
   height: 100%;
   width: 100%;
   background: linear-gradient(to left,
-  #333333,
-  #2C2C2C,
-  #262626,
-  #212121,
-  #1B1B1B,
-  #151515
-);
+    #333333,
+    #2C2C2C,
+    #262626,
+    #212121,
+    #1B1B1B,
+    #151515
+  );
   background-size: 800% 800%;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   text-align: center;
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @keyframes gradient {
@@ -34,6 +34,7 @@ body {
     background-position: 0% 50%;
   }
 }
+
 .fundo {
   position: absolute;
   top: 0;
@@ -44,9 +45,10 @@ body {
   background-position: center;
   opacity: 10%;
 }
+
 img {
-  width: 35%; 
-  height: auto; 
+  width: 35%;
+  height: auto;
 }
 
 h1 {
@@ -55,23 +57,22 @@ h1 {
   text-transform: uppercase;
   color: transparent;
   background: linear-gradient(to right,
-  #00BFFF,
-  #1E90FF,
-  #87CEFA,
-  #ADD8E6,
-  #B0E0E6,
-  #E0FFFF);
+    #00BFFF,
+    #1E90FF,
+    #87CEFA,
+    #ADD8E6,
+    #B0E0E6,
+    #E0FFFF);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  animation: shine 5s infinite; 
+  animation: shine 5s infinite;
   font-family: 'IBM Plex Mono', monospace;
   word-spacing: -30px;
 }
-
 
 @keyframes shine {
   0% {
@@ -85,11 +86,11 @@ h1 {
   }
 }
 
-
 #botaoLogin {
   width: 270px;
   height: 75px;
-  margin-top: 15px; 
+  margin-top: 15px;
+  margin-bottom: 600px; 
   border: 1px;
   outline: none;
   color: black;
@@ -105,10 +106,10 @@ h1 {
 
 #botaoLogin:before {
   content: '';
-  background: linear-gradient(45deg, 
-  #1E90FF,
-  #87CEFA,
-  #ADD8E6);
+  background: linear-gradient(45deg,
+    #1E90FF,
+    #87CEFA,
+    #ADD8E6);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -142,17 +143,61 @@ h1 {
   width: 100%;
   height: 100%;
   background: linear-gradient(to right,
-  #00BFFF,
-  #1E90FF);
+    #00BFFF,
+    #1E90FF);
   left: 0;
   top: 0;
   border-radius: 10px;
 }
 
+.abaixo {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 20px 0;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  gap: 20px;
+  border-top: 2px solid #1E90FF;
+  position: relative;
+  justify-content: center;
+}
+
+.abaixo a {
+  margin: 10px;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.abaixo a:hover {
+  color: #1E90FF; 
+}
+
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -171,6 +216,7 @@ h1 {
   h1 {
     font-size: 60px;
   }
+
   .suspenso-content button,
   #botaoGoogle {
     font-size: 14px;
@@ -182,6 +228,7 @@ h1 {
   h1 {
     font-size: 50px;
   }
+
   .suspenso-content button,
   #botaoGoogle {
     font-size: 12px;
@@ -193,6 +240,7 @@ h1 {
   h1 {
     font-size: 40px;
   }
+
   .suspenso-content button,
   #botaoGoogle {
     font-size: 10px;

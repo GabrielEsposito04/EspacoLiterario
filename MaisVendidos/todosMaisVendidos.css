@@ -1,9 +1,11 @@
 h1{
+    color: purple;
     margin: 10px;
     padding: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
 }
 main {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -30,6 +32,7 @@ main {
     border-style: solid; 
     border-image: 
     linear-gradient(to bottom,#1E90FF, #ADD8E6) 1;
+    
 }
 .livro:hover {
     transform: scale(1.05);
@@ -45,20 +48,22 @@ main {
 .livro h3 {
     font-size: 18px;
     margin: 10px 0;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
     font-weight: bold;
 }
 
 .livro p {
     font-size: 14px;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
     font-weight: bold;
 }
 .livro-preco{
     font-size: 14px;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
 }
 
@@ -91,7 +96,8 @@ main {
     text-decoration: none;
     border-radius: 10px;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
+   
     font-weight: bold;
     border: none;
 
@@ -112,7 +118,7 @@ main {
     text-align: center;
     display: inline-block;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
 }
@@ -139,7 +145,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -180,6 +186,9 @@ main {
     flex-direction: column;
     align-items: center;
     border: none;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -3px;
+    font-weight: bold;
 }
 
 .botaoFechar {
@@ -203,7 +212,8 @@ main {
     font-size: 25px;
     line-height: 1.5;
     text-align: justify;
-    font-family: Arial, sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
+   
     font-weight: bold;
 }
 
@@ -217,7 +227,8 @@ main {
     text-decoration: none;
     border-radius: 10px;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
+   
     font-weight: bold;
     border: none;
 }
@@ -235,7 +246,8 @@ main {
     text-align: center;
     display: inline-block;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
+   
     font-weight: bold;
     border: none;
 }

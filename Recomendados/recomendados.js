@@ -55,7 +55,7 @@ function createBookElement(livro) {
     livroDiv.appendChild(img);
 
     const titulo = document.createElement('h3');
-    titulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 15);
+    titulo.textContent = truncateText(livro.volumeInfo.title || 'Título não disponível', 12);
     livroDiv.appendChild(titulo);
 
     const autor = document.createElement('p');
@@ -103,7 +103,7 @@ function showSynopsis(sinopse) {
 
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
-        return text.slice(0, maxLength) + '...';
+        return text.slice(0, maxLength) + '';
     }
     return text;
 }

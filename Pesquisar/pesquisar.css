@@ -6,14 +6,14 @@
     display: flex;
     align-items: center;
     gap: 15px; 
+    
 }
 
 #buscar form {
     display: flex;
     gap: 5px; 
     margin-bottom: 0;
-    font-family: Arial, sans-serif;
-    font-weight: bold; 
+    
 }
 
 #buscar input,
@@ -23,6 +23,8 @@
     font-size: 1em;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -6px;
 }
 
 #buscar button {
@@ -34,7 +36,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
     font-weight: bold;
     border: none;
 }
@@ -73,6 +76,7 @@
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #e0e0e0;
+    
 }
 
 .resultado .livro img {
@@ -84,22 +88,23 @@
 
 .resultado .livro-info {
     flex: 1;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+   
     border: none;
 }
 
 .resultado .livro-info h2 {
     font-size: 2em;
     margin-bottom: 10px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -5px;
     border: none;
 }
 
 .resultado .livro-info p {
+    font-size: 1.4em;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -3px;
     font-weight: bold;
     border: none;
 }
@@ -114,7 +119,8 @@
     text-decoration: none;
     border-radius: 10px;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -3px;
     font-weight: bold;
     border: none;
 }
@@ -133,7 +139,8 @@
     text-align: center;
     display: inline-block;
     margin-top: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -3px;
     font-weight: bold;
     border: none;
 }
@@ -158,7 +165,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    word-spacing: -3px;
     font-weight: bold;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

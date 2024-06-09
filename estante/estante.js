@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
                     livro.className = 'livro';
 
                     const titulo = document.createElement('h3');
-                    titulo.textContent = item.volumeInfo.title;
+                    titulo.textContent = truncateString(item.volumeInfo.title, 20);
 
                     const autor = document.createElement('p');
-                    autor.textContent = item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Autor desconhecido';
+                    autor.textContent = item.volumeInfo.authors ? truncateString(item.volumeInfo.authors.join(', '), 20) : 'Autor desconhecido';
 
                     const miniatura = document.createElement('img');
                     miniatura.src = item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : '/imagens/indisponivel.png';
@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
             errorMessage.textContent = 'Ocorreu um erro ao buscar seus livros. Por favor, tente novamente mais tarde.';
             livroLista.appendChild(errorMessage);
         });
+    }
+
+    function truncateString(str, maxLength) {
+        return str.length > maxLength ? str.slice(0, maxLength) + '' : str;
     }
 
     if (botaoFecharModal) {
