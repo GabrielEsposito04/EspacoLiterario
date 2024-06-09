@@ -156,15 +156,15 @@ h1 {
   padding: 20px 0;
   width: 100%;
   text-align: left;
-  display: flex;
-  gap: 20px;
+  display: flexbox;
   border-top: 2px solid #1E90FF;
   position: relative;
   justify-content: center;
 }
 
 .abaixo a {
-  margin: 10px;
+  margin-left: 30px;
+  margin: 20px;
   text-decoration: none;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
