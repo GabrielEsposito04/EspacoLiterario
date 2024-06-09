@@ -5,26 +5,41 @@ let genero = "";
 
 function PesquisarLivros(query, pagina = 0) {
     const startIndex = pagina * maxResults;
+    const precoFiltro = document.getElementById('FiltroPreco').value;
+    const idiomaFiltro = document.getElementById('FiltroIdioma').value;
 
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&startIndex=${startIndex}&maxResults=40`)
     .then(response => response.json())
     .then(data => {
         if (data.items) {
-            todosLivros = data.items.sort((a, b) => {
-                const estrelaA = a.volumeInfo.averageRating || 0;
-                const estrelaB = b.volumeInfo.averageRating || 0;
-                return estrelaB - estrelaA;
-            });
-            displayLivros(todosLivros.slice(pagina * maxResults, (pagina + 1) * maxResults));
-            displayPagination(todosLivros.length, pagina);
-            scrollToTop();
+            todosLivros = data.items
+                .filter(livro => filtrarPorPreco(livro, precoFiltro))
+                .filter(livro => filtrarPorIdioma(livro, idiomaFiltro))
+                .sort((a, b) => {
+                    const estrelaA = a.volumeInfo.averageRating || 0;
+                    const estrelaB = b.volumeInfo.averageRating || 0;
+                    return estrelaB - estrelaA;
+                });
+
+            if (todosLivros.length > 0) {
+                displayLivros(todosLivros.slice(0, maxResults));
+                displayPagination(todosLivros.length, pagina);
+            } else {
+                if (idiomaFiltro) {
+                    displayMensagemIndisponível("Não possuímos o livro que você procura nesse idioma.");
+                } else if (precoFiltro) {
+                    displayMensagemIndisponível("Não possuímos o livro que você procura nesse preço.");
+                } else {
+                    displayMensagemIndisponível("Nenhum livro encontrado.");
+                }
+            }
         } else {
-            displayMensagemIndisponível("Nenhum livro encontrado. Por favor, tente novamente.");
+            displayMensagemIndisponível("Nenhum livro encontrado.");
         }
     })
     .catch(error => {
-        console.error('Error fetching books:', error);
-        displayMensagemIndisponível("Erro ao buscar livros. Por favor, tente novamente.");
+        console.error("Erro ao buscar livros:", error);
+        displayMensagemIndisponível("Erro ao buscar livros. Tente novamente mais tarde.");
     });
 }
 
@@ -47,6 +62,31 @@ function PesquisarGenero() {
     PesquisarLivros(`subject:${genero}`);
 }
 
+function filtrarPorPreco(livro, precoFiltro) {
+    if (!precoFiltro) return true;
+
+    const preco = livro.saleInfo.retailPrice ? livro.saleInfo.retailPrice.amount : null;
+
+    switch (precoFiltro) {
+        case 'free':
+            return livro.saleInfo.saleability === 'FREE';
+        case '50':
+            return preco !== null && preco <= 50;
+        case '100':
+            return preco !== null && preco <= 100;
+        case 'over100':
+            return preco !== null && preco > 100;
+        default:
+            return true;
+    }
+}
+
+function filtrarPorIdioma(livro, idiomaFiltro) {
+    if (!idiomaFiltro) return true;
+
+    return livro.volumeInfo.language === idiomaFiltro;
+}
+
 function displayLivros(books) {
     const resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML = '';
@@ -64,8 +104,7 @@ function displayLivros(books) {
                 <p><strong>Data de publicação:</strong> ${livro.volumeInfo.publishedDate ? livro.volumeInfo.publishedDate : 'Data de publicação desconhecida'}</p>
                 <div class="avaliacao">${getStarRating(livro.volumeInfo.averageRating)}</div>
                 <p><strong>Sinopse:</strong> ${livro.volumeInfo.description ? livro.volumeInfo.description : 'Sinopse não disponível'}</p>
-                <p><strong>Preço:</strong> ${livro.saleInfo.retailPrice ? `${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(livro.saleInfo.listPrice.amount)}` 
-                : 'Preço não disponível'}</p>
+                <p><strong>Preço:</strong> ${livro.saleInfo.retailPrice ? `${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(livro.saleInfo.listPrice.amount)}` : 'Preço não disponível'}</p>
                 ${livro.saleInfo.buyLink ? `<a href="${livro.saleInfo.buyLink}" target="_blank" class="buy-button">Comprar</a>` : '<span class="unavailable-button">Indisponível</span>'}
             </div>
         `;
@@ -76,7 +115,7 @@ function displayLivros(books) {
 function getStarRating(avaliacao) {
     const estrelaCheia = '<span class="star gold">&#9733;</span>';
     const estrelaVazia = '<span class="star gray">&#9733;</span>';
-    
+
     if (!avaliacao) {
         return estrelaVazia.repeat(5);
     } else {
@@ -89,9 +128,8 @@ function getIdioma(code) {
         en: 'Inglês',
         pt: 'Português',
         fr: 'Francês',
-        
     };
-    return linguas[code] || 'Idioma desconhecido';
+    return linguas[code] || '';
 }
 
 function displayPagination(totalItems, pagina) {
@@ -104,6 +142,7 @@ function displayPagination(totalItems, pagina) {
     anteriorBotao.onclick = () => {
         if (pagina > 0) {
             startIndex--;
+            scrollToTop();
             if (genero) {
                 PesquisarLivros(`subject:${genero}`, startIndex);
             } else {
@@ -116,6 +155,7 @@ function displayPagination(totalItems, pagina) {
     proximoBotao.onclick = () => {
         if ((pagina + 1) * maxResults < totalItems) {
             startIndex++;
+            scrollToTop();
             if (genero) {
                 PesquisarLivros(`subject:${genero}`, startIndex);
             } else {
@@ -134,3 +174,29 @@ function displayMensagemIndisponível(message) {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// Eventos de busca
+document.getElementById('searchButton').onclick = PesquisarNome;
+document.getElementById('generoSelect').onchange = PesquisarGenero;
+document.getElementById('FiltroPreco').onchange = () => {
+    const generoSelect = document.getElementById('generoSelect').value;
+    if (generoSelect.trim()) {
+        PesquisarLivros(`subject:${generoSelect}`);
+    } else {
+        const searchInput = document.getElementById('searchInput').value;
+        if (searchInput.trim()) {
+            PesquisarLivros(searchInput);
+        }
+    }
+};
+document.getElementById('FiltroIdioma').onchange = () => {
+    const generoSelect = document.getElementById('generoSelect').value;
+    if (generoSelect.trim()) {
+        PesquisarLivros(`subject:${generoSelect}`);
+    } else {
+        const searchInput = document.getElementById('searchInput').value;
+        if (searchInput.trim()) {
+            PesquisarLivros(searchInput);
+        }
+    }
+};

@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
             livroLista.appendChild(errorMessage);
         });
     }
-
     function truncateString(str, maxLength) {
         return str.length > maxLength ? str.slice(0, maxLength) + '' : str;
     }

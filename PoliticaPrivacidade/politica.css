@@ -10,23 +10,48 @@
     margin-top: 40px;
     box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace;
-
+    margin-bottom: auto;
 }
+
 
 h1 {
     font-size: 3em;
     color: #040949;
+    text-align: center;
+    
 }
 p {
     font-size: 2em;
     line-height: 1.5;
     color: #040949;
     font-weight: bolder;
+    text-align: left;
 
 }
 .container p{
     max-width: 1500px;
     margin: 0 auto;
+    
+}
+.voltar {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #01509a;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    border: none;
+}
+
+.voltar a {
+    color: white;
+    text-decoration: none;
+    display: block;
 }
 
 @media (max-width: 768px) {

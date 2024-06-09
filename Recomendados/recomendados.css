@@ -189,3 +189,35 @@
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #01509a;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    border: none;
+}
+
+.voltar a {
+    color: white;
+    text-decoration: none;
+    width: 100%; 
+    text-align: center; 
+    display: block;
+}
+
+

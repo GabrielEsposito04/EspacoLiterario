@@ -5,18 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <ul class="footer-links">
                 <li><a href="/Home/home.html">Home</a></li>
                 <li><a href="/Pesquisar/pesquisar.html">Pesquisar</a></li>
-                <li><a href="/Estante/estante.html">Biblioteca</a></li>
-                <li><a href="/Recomendados/recomendados.html">Recomendados</a></li>
-                
+                <li><a href="/Estante/estante.html">Biblioteca</a></li>   
             </ul>
             <ul class="footer-links2">
                 <li><a href="/MaisVendidos/todosMaisVendidos.html">Mais Vendidos</a></li>
-                <li><a href="/Sobre/sobre.html">Sobre</a></li>
-                <li><a href="/Contato/contato.html">Contato</a></li>
+                <li><a href="/Recomendados/recomendados.html">Recomendados</a></li>
             </ul>
             <div class="footer-contact">
                 <p>Email: espaco-literal@contato.com</p>
-                <p>Telefone: (21) 912314-5678</p>
+                <p>Telefone: (21) 91234-5678</p>
             </div>
         </div>
     `;

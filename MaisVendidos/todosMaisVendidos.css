@@ -1,10 +1,3 @@
-h1{
-    color: purple;
-    margin: 10px;
-    padding: 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    word-spacing: -5px;
-}
 main {
     margin: 0;
     padding: 0;
@@ -253,6 +246,36 @@ main {
 }
 #Indisponivel:hover {
     background-color: #B22222;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    background-color: #01509a;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    border: none;
+}
+
+.voltar a {
+    color: white;
+    text-decoration: none;
+    width: 100%; 
+    text-align: center; 
+    display: block;
 }
 
 @media (max-width: 1200px) {
