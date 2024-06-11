@@ -104,13 +104,6 @@ h1 {
   font-size: 20px;
   font-weight: 500;
 }
-#botaoLogin img {
-  width: 10%;
-  height: auto;
-  margin-right: 10px; 
-  position: absolute;
-  left: 15px; 
-}
 #botaoLogin:before {
   content: '';
   background: linear-gradient(45deg,
