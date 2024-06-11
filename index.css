@@ -93,17 +93,24 @@ h1 {
   margin-bottom: 600px; 
   border: 1px;
   outline: none;
-  color: black;
-  background: #111111;
+  color: white;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
-  font-family: 'IBM Plex Mono', monospace;
+ font-family: -apple-system,BlinkMacSystemFont,
+ "Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,
+ "Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
 }
-
+#botaoLogin img {
+  width: 10%;
+  height: auto;
+  margin-right: 10px; 
+  position: absolute;
+  left: 15px; 
+}
 #botaoLogin:before {
   content: '';
   background: linear-gradient(45deg,
