@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="/Recomendados/recomendados.html">Recomendados</a></li>
             </ul>
             <div class="footer-contact">
-                <p>Email: espaco-literal@contato.com</p>
+                <p>Email: espaco-literario@contato.com</p>
                 <p>Telefone: (21) 91234-5678</p>
             </div>
         </div>
